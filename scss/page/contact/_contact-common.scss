@@ -1,0 +1,169 @@
+@use "../../global" as g;
+
+/*!
+page > contact > contact-common
+------------------------------
+*/
+.contact-form {
+  padding-bottom: 64rem;
+
+  @include g.mq() {
+    padding-bottom: 96rem;
+  }
+}
+
+.contact-form-body {
+  display: grid;
+  gap: 24rem;
+
+  @include g.mq() {
+    gap: 32rem;
+  }
+}
+
+.contact-form-item {
+  display: grid;
+  gap: 6rem;
+  @include g.mq() {
+    grid-template-columns: 1fr 494rem;
+    justify-content: space-between;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.contact-form-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include g.mq() {
+    justify-content: start;
+    align-items: flex-start;
+    gap: 8rem;
+  }
+}
+
+.contact-form-label-text {
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 18rem;
+    margin-top: 12rem;
+  }
+}
+
+.contact-form-label-required {
+  display: inline-block;
+  padding: 2rem 8rem;
+  font-size: 13rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border-radius: 7rem;
+
+  @include g.mq() {
+    margin-top: 14.5rem;
+  }
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  padding: 12rem 8rem;
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  font-family: var(--font-family-base);
+  color: var(--color-font-base);
+  background-color: var(--color-bg-extra-light);
+  border-radius: 8rem;
+  appearance: none;
+  -webkit-appearance: none;
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+
+  &::placeholder {
+    color: var(--color-font-light);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2rem var(--color-primary);
+  }
+}
+
+.contact-form-textarea {
+  resize: vertical;
+  field-sizing: content;
+  min-height: 200rem;
+}
+
+.contact-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16rem;
+  color: var(--color-font-base);
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}
+
+.contact-form-submit {
+  display: grid;
+  place-items: center;
+  gap: 16rem;
+}
+
+.contact-form-submit-text {
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 0;
+    text-underline-offset: 1rem;
+  }
+}
+
+.contact-form-button {
+  display: inline-block;
+  padding: 14rem 40rem;
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 71rem;
+  transition: background-color 0.3s var(--easing-ease-out-cubic);
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-primary02);
+    }
+  }
+
+  &:focus {
+    outline: 2rem solid var(--color-primary);
+    outline-offset: 2rem;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

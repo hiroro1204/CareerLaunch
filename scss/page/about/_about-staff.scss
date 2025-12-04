@@ -1,0 +1,142 @@
+@use "../../global" as g;
+
+/*!
+page > about > about-staff
+------------------------------
+*/
+
+.about-staff {
+  padding-block: 40rem 64rem;
+  position: relative;
+  overflow: hidden;
+
+  @include g.mq() {
+    padding-block: 54rem 87rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 355rem;
+    height: 430rem;
+    background-color: var(--color-primary);
+    border-bottom-left-radius: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--z-index-negative);
+
+    @include g.mq() {
+      width: 1326rem;
+      height: 390rem;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.about-staff-head {
+  padding-inline: 20rem 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+
+  @include g.mq() {
+    padding-inline: 83rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+
+.about-staff-text {
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+
+.about-staff-splide-wrapper {
+  margin: 40rem 0 0 20rem;
+
+  @include g.mq() {
+    margin: 64rem 0 0 172rem;
+  }
+
+  .splide__track {
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+.js-about-staff-splide {
+  &:focus {
+    outline: 2rem solid var(--color-font-base);
+    outline-offset: 4rem;
+    border-radius: 8rem;
+  }
+
+  // マウスユーザーの場合はアウトラインを表示しない
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+.about-staff-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10rem;
+  overflow: hidden;
+}
+
+.about-staff-card-body {
+  display: grid;
+  margin-top: 16rem;
+}
+
+.about-staff-card-role {
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  gap: 10rem;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
+.about-staff-card-name {
+  display: flex;
+  gap: 16rem;
+  align-items: center;
+}
+
+.about-staff-card-name-ja {
+  font-size: 20rem;
+  line-height: 1.7;
+  letter-spacing: 0.075em;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.about-staff-card-name-en {
+  font-family: var(--font-family-dosis);
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-font-light);
+  text-transform: capitalize;
+
+  @include g.mq() {
+    font-size: 15rem;
+  }
+}

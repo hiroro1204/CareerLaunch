@@ -1,0 +1,143 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-service
+------------------------------
+*/
+
+.top-service {
+  padding-block: 64rem;
+  position: relative;
+
+  @include g.mq() {
+    padding-block: 64rem 96rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 355rem;
+    height: 500rem;
+    background-color: var(--color-primary);
+    border-bottom-right-radius: 30rem;
+    z-index: var(--z-index-negative);
+
+    @include g.mq() {
+      width: 1336rem;
+      height: 410rem;
+      border-bottom-right-radius: 50rem;
+    }
+  }
+}
+
+.top-service-wrapper {
+  padding-inline: 19rem 40rem;
+
+  @include g.mq() {
+    padding-inline: 83rem;
+    display: grid;
+    grid-template-columns: 421rem 1fr;
+    gap: 65rem;
+    overflow-x: hidden;
+  }
+}
+
+.top-service-text {
+  margin-top: 40rem;
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+
+.top-service-list {
+  margin-top: 40rem;
+  display: grid;
+  gap: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(2, 337rem);
+    margin-top: 0;
+    min-width: 0;
+  }
+}
+
+.top-service-card {
+  height: 100%;
+}
+
+.top-service-card-link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-text {
+        color: var(--color-primary02);
+      }
+
+      .c-button-icon {
+        background-color: transparent;
+
+        &::before {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.top-service-card-image {
+  width: 100%;
+  height: 251rem;
+  overflow: hidden;
+  border-radius: 10rem;
+
+  @include g.mq() {
+    height: 385rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.top-service-card-title {
+  display: inline-grid;
+  gap: 2rem;
+}
+
+.top-service-card-title-ja {
+  font-size: 22rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.top-service-card-title-en {
+  font-size: 15rem;
+  font-family: var(--font-family-dosis);
+  color: var(--color-primary);
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+.top-service-card-text {
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+.top-service-card-button {
+  text-align: right;
+
+  @include g.mq() {
+    margin-top: auto;
+  }
+}

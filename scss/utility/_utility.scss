@@ -1,0 +1,46 @@
+@use "../global" as g;
+
+/*!
+utility > utility
+------------------------------
+*/
+.u-visually-hidden {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-block-sp {
+  display: block;
+
+  @include g.mq() {
+    display: inline;
+  }
+}
+
+.u-block-pc {
+  display: inline;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
+// スクロールアニメーション用の初期スタイル（FOUC防止）
+// JavaScript読み込み前に要素が表示されるのを防ぐ
+// .js-scroll-fade-in が付いている要素にこのクラスを追加する
+.u-scroll-fade-in-init {
+  opacity: 0;
+  transform: translateY(30px);
+}

@@ -1,0 +1,31 @@
+@use "../global" as g;
+
+/*!
+foundation > base
+------------------------------
+*/
+:root {
+  --base-vw: 375;
+
+  @include g.mq() {
+    --base-vw: 1366;
+  }
+}
+
+html {
+  font-size: calc(100vw / var(--base-vw));
+  scroll-padding-top: 24rem;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-font-base);
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}

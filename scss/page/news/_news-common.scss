@@ -1,0 +1,16 @@
+@use "../../global" as g;
+
+/*!
+page > news > news-common
+------------------------------
+*/
+
+.news-content {
+  padding-block: 2rem 64rem;
+  margin-top: -16rem;
+
+  @include g.mq() {
+    padding-block: 1rem 96rem;
+    margin-top: -24rem;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+.c-title {
+  display: flex;
+  gap: 18rem;
+  padding-block: 1rem;
+
+  @include g.mq() {
+    gap: 24rem;
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-top: 17rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+
+    @include g.mq() {
+      margin-top: 0;
+    }
+  }
+}
+
+.c-title-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14rem;
+
+  @include g.mq() {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 14rem;
+  }
+}
+
+.c-title-en {
+  font-size: 40rem;
+  font-family: var(--font-family-dosis);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+
+  @include g.mq() {
+    font-size: 50rem;
+  }
+}
+
+.c-title-ja {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.c-title.c-title--white {
+  &::before {
+    background-color: var(--color-white);
+  }
+
+  .c-title-en,
+  .c-title-ja {
+    color: var(--color-white);
+  }
+}

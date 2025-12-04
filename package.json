@@ -1,0 +1,12 @@
+{
+  "name": "career-launch",
+  "version": "1.0.0",
+  "description": "株式会社Career Launch コーポレートサイト",
+  "scripts": {
+    "dev": "browser-sync start --server --files 'css/*.css, *.html, js/**/*.js'",
+    "dev:watch": "browser-sync start --server --files 'css/*.css, *.html, js/**/*.js' --watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}

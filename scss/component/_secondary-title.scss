@@ -1,0 +1,31 @@
+@use "../global" as g;
+
+/*!
+component > secondary-title
+------------------------------
+*/
+.c-secondary-title {
+  display: flex;
+  align-items: center;
+  font-size: 16rem;
+  font-family: var(--font-family-dosis);
+  line-height: 1;
+  letter-spacing: 0.075em;
+  font-weight: 500;
+  text-transform: capitalize;
+  gap: 10rem;
+
+  @include g.mq() {
+    font-size: 20rem;
+    gap: 14rem;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+}

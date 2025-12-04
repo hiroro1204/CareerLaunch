@@ -1,0 +1,96 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-recruit
+------------------------------
+*/
+
+.top-recruit {
+  @include g.mq() {
+    padding-bottom: 96rem;
+  }
+}
+
+.top-recruit-bg-image {
+  height: 200rem;
+
+  @include g.mq() {
+    height: 350rem;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.top-recruit-message {
+  font-family: var(--font-family-dosis);
+  font-size: 86rem;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  font-weight: 300;
+  color: var(--color-primary);
+  margin-top: -53rem;
+
+  @include g.mq() {
+    margin-top: -90rem;
+    font-size: 150rem;
+  }
+}
+
+.top-recruit-body-wrapper {
+  margin-top: calc(80rem - 33rem);
+
+  @include g.mq() {
+    margin-top: calc(118rem - 60rem);
+    padding-left: 97rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    gap: 148rem;
+  }
+}
+
+.top-recruit-lead {
+  margin-top: 16rem;
+  font-size: 28rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 34rem;
+    display: flex;
+  }
+}
+
+.top-recruit-text {
+  margin-top: 24rem;
+  line-height: 2.2;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.top-recruit-text-en {
+  margin-top: 14rem;
+  font-family: var(--font-family-dosis);
+  font-size: 15rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+
+  @include g.mq() {
+    margin-top: 24rem;
+  }
+}
+
+.top-recruit-button {
+  padding-block: 64rem;
+  display: grid;
+  place-items: center;
+
+  @include g.mq() {
+    padding-block: 80rem 0;
+  }
+}

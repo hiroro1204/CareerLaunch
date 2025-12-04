@@ -1,0 +1,58 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > recruit-culture
+------------------------------
+*/
+
+.recruit-culture {
+  padding-block: 64rem;
+  overflow: hidden;
+
+  @include g.mq() {
+    padding-block: 96rem;
+  }
+}
+
+.recruit-culture-splide-wrapper {
+  margin-top: 40rem;
+
+  .splide__track {
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+.js-recruit-culture-splide {
+  &:focus {
+    outline: 2rem solid var(--color-primary);
+    outline-offset: 4rem;
+    border-radius: 8rem;
+  }
+
+  // マウスユーザーの場合はアウトラインを表示しない
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+.recruit-culture-image {
+  border-radius: 10rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.recruit-button-wrapper {
+  margin-top: 64rem;
+  display: grid;
+  place-items: center;
+
+  @include g.mq() {
+    margin-top: 96rem;
+  }
+}

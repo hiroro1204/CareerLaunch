@@ -1,0 +1,96 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14rem;
+
+  @include g.mq() {
+    gap: 24rem;
+
+    .c-button-text {
+      font-size: 20rem;
+    }
+
+    .c-button-icon {
+      width: 58rem;
+      height: 58rem;
+
+      &::before {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-text {
+        color: var(--color-primary02);
+      }
+
+      .c-button-icon {
+        background-color: transparent;
+
+        &::before {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.c-button-text {
+  font-size: 18rem;
+  font-family: var(--font-family-dosis);
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  transition: color 0.3s var(--easing-ease-out-cubic);
+}
+
+.c-button-icon {
+  display: block;
+  width: 47rem;
+  height: 47rem;
+  box-shadow: 0 0 0 1rem var(--color-primary) inset;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.3s var(--easing-ease-out-cubic);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    transition: background-color 0.3s var(--easing-ease-out-cubic);
+  }
+}
+
+.c-button.c-button--small {
+  gap: 10rem;
+
+  .c-button-text {
+    font-size: 16rem;
+  }
+
+  .c-button-icon {
+    width: 32rem;
+    height: 32rem;
+
+    &::before {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

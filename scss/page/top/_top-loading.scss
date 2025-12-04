@@ -1,0 +1,32 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-loading
+------------------------------
+*/
+
+.top-loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  z-index: var(--z-index-loading);
+}
+
+.top-loading-inner {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.top-loading-image {
+  display: flex;
+  gap: calc(26 / 2 * 1rem);
+
+  img {
+    width: calc(220 / 2 * 1rem);
+    aspect-ratio: 441 / 380;
+  }
+}

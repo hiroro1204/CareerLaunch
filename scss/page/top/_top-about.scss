@@ -1,0 +1,92 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-common
+------------------------------
+*/
+
+.top-about {
+  padding-block: 64rem;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 600rem 1fr;
+    gap: 59rem;
+    padding: 96rem 0 96rem 83rem;
+  }
+}
+
+.top-about-body {
+  padding-inline: 20rem;
+  @include g.mq() {
+    padding: 40rem 0 0 0;
+  }
+}
+
+.top-about-lead {
+  margin-top: 16rem;
+  font-size: 28rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 34rem;
+  }
+}
+
+.top-about-lead-en {
+  margin-top: 8rem;
+  font-family: var(--font-family-dosis);
+  font-size: 15rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.top-about-text {
+  margin-top: 24rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.top-about-button {
+  margin-top: 14rem;
+  text-align: right;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+}
+
+.top-about-image {
+  margin: 28rem 0 0 20rem;
+  width: 355rem;
+  height: 237rem;
+  border-radius: 20rem;
+  overflow: hidden;
+  border-radius: 10rem 0 10rem 0;
+
+  @include g.mq() {
+    width: 100%;
+    height: 670rem;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include g.mq() {
+      object-position: 67% 50%;
+    }
+  }
+}

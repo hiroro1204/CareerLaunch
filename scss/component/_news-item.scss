@@ -1,0 +1,55 @@
+@use "../global" as g;
+
+/*!
+component > news-item
+------------------------------
+*/
+.c-news-item {
+  border-bottom: 1rem solid var(--color-border);
+}
+
+.c-news-item-link {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  padding: 16rem 10rem;
+
+  @include g.mq() {
+    grid-template-columns: 62rem 1fr;
+    gap: 40rem;
+    padding: 24rem 20rem;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--color-primary) 10%,
+        transparent
+      );
+    }
+  }
+}
+
+.c-news-item-date {
+  font-family: var(--font-family-dosis);
+  font-size: 13rem;
+  line-height: 1.7;
+  letter-spacing: 0.025em;
+  color: var(--color-font-light);
+
+  @include g.mq() {
+    font-size: 14rem;
+  }
+}
+
+.c-news-item-title {
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}

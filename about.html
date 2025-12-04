@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>株式会社Career Launch</title>
+    <meta
+      name="description"
+      content="株式会社Career Launchの公式サイトです。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="株式会社Career Launch" />
+    <meta property="og:url" content="https://example.com/about.html" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="私たちについて | 株式会社Career Launch"
+    />
+    <meta
+      property="og:description"
+      content="株式会社Career Launchの公式サイトです。あなたの「らしさ」が、未来をつくる。一人ひとりと真剣に向き合い、自分らしく社会で活躍する人材を育成します。"
+    />
+    <meta property="og:image" content="https://example.com/img/ogp.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="私たちについて | 株式会社Career Launch"
+    />
+    <meta
+      name="twitter:description"
+      content="株式会社Career Launchの公式サイトです。あなたの「らしさ」が、未来をつくる。一人ひとりと真剣に向き合い、自分らしく社会で活躍する人材を育成します。"
+    />
+    <meta name="twitter:image" content="https://example.com/img/ogp.png" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap"
+    />
+
+    <!-- css -->
+    <!-- css: splide（遅延気味に読み込み） -->
+    <link rel="preload" as="style" href="css/vendor/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="css/vendor/splide.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/vendor/splide.min.css" />
+    </noscript>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="js/vendor/splide.min.js" defer></script>
+    <script src="js/vendor/splide-extension-auto-scroll.min.js" defer></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="l-header l-header--page">
+      <div class="l-header-inner">
+        <div class="l-header-logo">
+          <a href="index.html">
+            <img
+              src="img/logo_primary.png"
+              alt="株式会社Career Launch"
+              width="500"
+              height="92"
+            />
+          </a>
+        </div>
+
+        <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
+          <nav class="l-header-menu-nav" aria-label="メニュー">
+            <ul class="l-header-menu-list">
+              <li class="l-header-menu-item">
+                <a
+                  href="index.html"
+                  class="l-header-menu-link l-header-menu-link--top"
+                >
+                  <span class="l-header-menu-link-en">top</span>
+                  <span class="l-header-menu-link-ja">トップ</span>
+                </a>
+              </li>
+              <li class="l-header-menu-item">
+                <a href="about.html" class="l-header-menu-link">
+                  <span class="l-header-menu-link-en">about</span>
+                  <span class="l-header-menu-link-ja">私たちについて</span>
+                </a>
+              </li>
+              <li class="l-header-menu-item">
+                <a href="service.html" class="l-header-menu-link">
+                  <span class="l-header-menu-link-en">service</span>
+                  <span class="l-header-menu-link-ja">サービス</span>
+                </a>
+              </li>
+              <li class="l-header-menu-item">
+                <a href="news.html" class="l-header-menu-link">
+                  <span class="l-header-menu-link-en">news</span>
+                  <span class="l-header-menu-link-ja">お知らせ</span>
+                </a>
+              </li>
+              <li class="l-header-menu-item">
+                <a href="recruit.html" class="l-header-menu-link">
+                  <span class="l-header-menu-link-en">recruit</span>
+                  <span class="l-header-menu-link-ja">採用情報</span>
+                </a>
+              </li>
+              <li class="l-header-menu-item">
+                <a
+                  href="contact.html"
+                  class="l-header-menu-link l-header-menu-link--contact"
+                >
+                  <span class="l-header-menu-link-en">contact</span>
+                  <span class="l-header-menu-link-ja">お問い合わせ</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="l-header-menu-button l-header-menu-button-close js-hamburger-close-button"
+            aria-label="メニューを閉じる"
+          >
+            <span class="l-header-menu-button-close-line"></span>
+            <span class="l-header-menu-button-close-line"></span>
+          </button>
+        </dialog>
+        <button
+          class="l-header-menu-button js-hamburger-button"
+          aria-label="メニューを開く"
+        >
+          <span class="l-header-menu-button-dot"></span>
+          <span class="l-header-menu-button-dot"></span>
+          <span class="l-header-menu-button-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="c-page-kv">
+      <div class="c-page-kv-inner l-container">
+        <div class="c-page-kv-title">
+          <span class="c-page-kv-title-en">about</span>
+          <h1 class="c-page-kv-title-ja">私たちについて</h1>
+        </div>
+        <ol class="c-breadcrumb">
+          <li class="c-breadcrumb-item">
+            <a href="index.html" class="c-breadcrumb-text">top</a>
+          </li>
+          <li class="c-breadcrumb-item">
+            <span class="c-breadcrumb-text c-breadcrumb-text--current"
+              >about</span
+            >
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <main class="js-header-trigger">
+      <section class="about-philosophy">
+        <div class="l-container">
+          <div class="about-philosophy-title">
+            <div class="c-title">
+              <div class="c-title-body">
+                <span class="c-title-en">philosophy</span>
+                <h2 class="c-title-ja">私たちの価値</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-philosophy-content">
+          <ul class="about-philosophy-list l-container js-scroll-stagger">
+            <li
+              class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
+            >
+              <p class="about-philosophy-label">mission</p>
+              <p class="about-philosophy-main-text">
+                <span class="u-block">一人ひとりと</span>
+                <span class="u-block">真剣に向き合う</span>
+              </p>
+              <p class="about-philosophy-sub-text">
+                <span class="u-block">学生の可能性を最大限 </span>
+                <span class="u-block">引き出すパートナーとして</span>
+              </p>
+            </li>
+            <li
+              class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
+            >
+              <p class="about-philosophy-label">vision</p>
+              <p class="about-philosophy-main-text">
+                <span class="u-block">自分らしく社会で</span>
+                <span class="u-block">活躍する人材を育成</span>
+              </p>
+              <p class="about-philosophy-sub-text">
+                <span class="u-block">納得のいくキャリア選択が</span>
+                <span class="u-block">できる未来を創る</span>
+              </p>
+            </li>
+            <li
+              class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
+            >
+              <p class="about-philosophy-label">value</p>
+              <p class="about-philosophy-main-text">
+                <span class="u-block">『らしさ』を大切にした</span>
+                <span class="u-block">キャリア形成</span>
+              </p>
+              <p class="about-philosophy-sub-text">
+                <span class="u-block">型にはめない</span>
+                <span class="u-block">その人だけの強みを見つける</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-staff">
+        <div class="about-staff-head l-container">
+          <div class="c-title c-title--white">
+            <div class="c-title-body">
+              <span class="c-title-en">staff</span>
+              <h2 class="c-title-ja">スタッフ紹介</h2>
+            </div>
+          </div>
+          <p class="about-staff-text">
+            一人ひとりの個性を大切にしながら、あなたの可能性を最大限に引き出します。
+          </p>
+        </div>
+
+        <div class="about-staff-splide-wrapper">
+          <div class="splide js-about-staff-splide" tabindex="0" role="region" aria-label="スタッフ紹介スライダー">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="about-staff-card">
+                    <div class="about-staff-card-image">
+                      <img
+                        src="img/image_staffs_01.jpg"
+                        alt="田中 美咲"
+                        width="900"
+                        height="900"
+                      />
+                    </div>
+                    <div class="about-staff-card-body">
+                      <p class="about-staff-card-role">
+                        代表・キャリアカウンセラー
+                      </p>
+                      <p class="about-staff-card-name">
+                        <span class="about-staff-card-name-ja">田中 美咲</span>
+                        <span class="about-staff-card-name-en"
+                          >misaki tanaka</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="about-staff-card">
+                    <div class="about-staff-card-image">
+                      <img
+                        src="img/image_staffs_02.jpg"
+                        alt="佐藤 雄一"
+                        width="900"
+                        height="900"
+                      />
+                    </div>
+                    <div class="about-staff-card-body">
+                      <p class="about-staff-card-role">面接対策講師</p>
+                      <p class="about-staff-card-name">
+                        <span class="about-staff-card-name-ja">佐藤 雄一</span>
+                        <span class="about-staff-card-name-en"
+                          >yuichi sato</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="about-staff-card">
+                    <div class="about-staff-card-image">
+                      <img
+                        src="img/image_staffs_03.jpg"
+                        alt="山田 恵子"
+                        width="900"
+                        height="900"
+                      />
+                    </div>
+                    <div class="about-staff-card-body">
+                      <p class="about-staff-card-role">ES添削講師</p>
+                      <p class="about-staff-card-name">
+                        <span class="about-staff-card-name-ja">山田 恵子</span>
+                        <span class="about-staff-card-name-en"
+                          >keiko yamada</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="about-staff-card">
+                    <div class="about-staff-card-image">
+                      <img
+                        src="img/image_staffs_04.jpg"
+                        alt="鈴木 健太"
+                        width="900"
+                        height="900"
+                      />
+                    </div>
+                    <div class="about-staff-card-body">
+                      <p class="about-staff-card-role">IT業界専門講師</p>
+                      <p class="about-staff-card-name">
+                        <span class="about-staff-card-name-ja">鈴木 健太</span>
+                        <span class="about-staff-card-name-en"
+                          >kenta suzuki</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="about-staff-card">
+                    <div class="about-staff-card-image">
+                      <img
+                        src="img/image_staffs_05.jpg"
+                        alt="高橋 麻里"
+                        width="900"
+                        height="900"
+                      />
+                    </div>
+                    <div class="about-staff-card-body">
+                      <p class="about-staff-card-role">女性キャリア講師</p>
+                      <p class="about-staff-card-name">
+                        <span class="about-staff-card-name-ja">高橋 麻里</span>
+                        <span class="about-staff-card-name-en"
+                          >mari takahashi</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="company" class="about-company l-container">
+        <div class="about-company-body">
+          <div class="about-company-title">
+            <div class="c-title">
+              <div class="c-title-body">
+                <span class="c-title-en">company</span>
+                <h2 class="c-title-ja">会社案内</h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about-company-image js-scroll-fade-in u-scroll-fade-in-init"
+          >
+            <img
+              src="img/image_office.jpg"
+              alt="オフィス"
+              width="1800"
+              height="1200"
+            />
+          </div>
+          <table class="about-company-table">
+            <caption class="u-visually-hidden">
+              会社概要表
+            </caption>
+            <tbody>
+              <tr class="about-company-table-item">
+                <th>会社名</th>
+                <td>株式会社Career Launch</td>
+              </tr>
+              <tr class="about-company-table-item">
+                <th>住所</th>
+                <td>
+                  <span class="u-block">〒101-0045</span>
+                  <span class="u-block">
+                    東京都千代田区神田鍛冶町3-2-1 神田サクラビル5F</span
+                  >
+                </td>
+              </tr>
+              <tr class="about-company-table-item">
+                <th>代表者</th>
+                <td>田中美咲</td>
+              </tr>
+              <tr class="about-company-table-item">
+                <th>電話番号</th>
+                <td>
+                  <a href="tel:03-1234-5678">03-1234-5678</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer-inner">
+        <div class="l-footer-logo">
+          <a href="index.html">
+            <img
+              src="img/logo_white.png"
+              alt="株式会社Career Launch"
+              width="500"
+              height="92"
+            />
+          </a>
+        </div>
+        <address class="l-footer-address">
+          <p class="l-footer-address-text">株式会社Career Launch</p>
+          <p class="l-footer-address-text">
+            <span class="u-block-sp">〒101-0045</span>
+            <span class="u-block-sp"> 東京都千代田区神田鍛冶町3-2-1</span>
+            <span class="u-block-sp">神田サクラビル5F</span>
+          </p>
+          <p class="l-footer-address-text l-footer-address-text--tel">
+            <a href="tel:03-1234-5678">TEL：03-1234-5678</a>
+            <a href="tel:03-1234-5679">FAX：03-1234-5679</a>
+          </p>
+        </address>
+
+        <nav class="l-footer-nav" aria-label="サイトマップ">
+          <ul class="l-footer-nav-list">
+            <li class="l-footer-nav-item">
+              <a href="about.html" class="l-footer-nav-link"> about </a>
+            </li>
+            <li class="l-footer-nav-item">
+              <a href="service.html" class="l-footer-nav-link"> service </a>
+            </li>
+            <li class="l-footer-nav-item">
+              <a href="news.html" class="l-footer-nav-link"> news </a>
+            </li>
+            <li class="l-footer-nav-item">
+              <a href="recruit.html" class="l-footer-nav-link"> recruit </a>
+            </li>
+            <li class="l-footer-nav-item l-footer-nav-item--contact">
+              <a
+                href="contact.html"
+                class="l-footer-nav-link l-footer-nav-link--contact"
+              >
+                contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="l-footer-nav-sub" aria-label="サブサイトマップ">
+          <ul class="l-footer-nav-sub-list">
+            <li class="l-footer-nav-sub-item">
+              <a href="about.html#company" class="l-footer-nav-sub-link">
+                company
+              </a>
+            </li>
+            <li class="l-footer-nav-sub-item">
+              <a href="about.html" class="l-footer-nav-sub-link">
+                privacy policy
+              </a>
+            </li>
+          </ul>
+          <small class="l-footer-copyright">
+            © 2025 株式会社Career Launch
+          </small>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

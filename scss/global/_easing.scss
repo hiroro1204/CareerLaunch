@@ -1,0 +1,8 @@
+/*!
+global > easing
+------------------------------
+*/
+:root {
+  --easing-ease-in-out-cubic: cubic-bezier(0.76, 0, 0.24, 1);
+  --easing-ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+}

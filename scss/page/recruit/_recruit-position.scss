@@ -1,0 +1,68 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > recruit-position
+------------------------------
+*/
+
+.recruit-position {
+  padding-block: 0 64rem;
+
+  @include g.mq() {
+    padding-block: 0 96rem;
+  }
+}
+
+.recruit-position-list {
+  margin-top: 40rem;
+  display: grid;
+  gap: 16rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 54rem;
+    gap: 32rem 60rem;
+  }
+}
+
+.recruit-position-item {
+  padding: 31rem 19rem;
+  border-radius: 11rem;
+  border: 1rem solid var(--color-border);
+
+  @include g.mq() {
+    padding: 39rem;
+  }
+}
+
+.recruit-position-title {
+  display: grid;
+  gap: 4rem;
+}
+
+.recruit-position-title-ja {
+  font-size: 20rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+
+  @include g.mq() {
+    font-size: 28rem;
+  }
+}
+
+.recruit-position-title-en {
+  font-family: var(--font-family-dosis);
+  font-size: 15rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.recruit-position-description {
+  margin-top: 14rem;
+}

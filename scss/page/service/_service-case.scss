@@ -1,0 +1,90 @@
+@use "../../global" as g;
+
+/*!
+page > service > service-case
+------------------------------
+*/
+.service-case {
+  padding-block: 64rem;
+
+  @include g.mq() {
+    padding-block: 96rem;
+  }
+}
+
+.service-case-content {
+  margin-top: 40rem;
+
+  @include g.mq() {
+    margin-top: 54rem;
+  }
+}
+
+.service-case-list {
+  display: grid;
+  gap: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 374rem);
+    gap: 39rem;
+  }
+}
+
+.service-case-item {
+  height: 100%;
+}
+
+.service-list-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-list-image {
+  height: 223rem;
+  border-radius: 10rem;
+  overflow: hidden;
+
+  @include g.mq() {
+    height: 249rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.service-list-body {
+  margin-top: 14rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 8rem;
+  flex: 1;
+}
+
+.service-list-meta {
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.075em;
+  color: var(--color-font-light);
+  display: inline-flex;
+
+  strong {
+    color: var(--color-font-base);
+    font-weight: 500;
+  }
+}
+
+.service-list-text {
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}
+
+.service-list-button {
+  text-align: right;
+}

@@ -1,0 +1,95 @@
+@use "../../global" as g;
+
+/*!
+page > news > news-pagination
+------------------------------
+*/
+
+.news-pagination {
+  margin-top: 48rem;
+}
+
+.news-pagination-list {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-pagination-button {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background-color: var(--color-bg-light);
+  display: grid;
+  place-items: center;
+  font-size: 16rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: background-color 0.3s var(--easing-ease-out-cubic),
+    color 0.3s var(--easing-ease-out-cubic);
+
+  &:not(.news-pagination-button--ellipsis) {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.news-pagination-button--prev::before,
+.news-pagination-button--next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 10rem;
+  height: 10rem;
+  mask-image: url(../../../img/icon_pagination-arrow.svg);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: var(--color-font-base);
+  transition: background-color 0.3s var(--easing-ease-out-cubic);
+}
+
+.news-pagination-button--prev,
+.news-pagination-button--next {
+  @media (any-hover: hover) {
+    &:hover {
+      &::before,
+      &::before {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.news-pagination-button--prev::before {
+  rotate: 180deg;
+}
+
+.news-pagination-button--current {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.news-pagination-button--ellipsis {
+  background-color: transparent;
+  display: inline-flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-font-base);
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../global" as g;
+
+/*!
+page > about > about-company
+------------------------------
+*/
+
+.about-company {
+  padding-block: 64rem;
+  background-color: var(--color-bg-extra-light);
+
+  @include g.mq() {
+    padding-block: 96rem;
+  }
+}
+
+.about-company-body {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 1fr 549rem;
+    grid-template-rows: repeat(2, auto);
+    gap: 0 51rem;
+  }
+}
+
+.about-company-image {
+  margin-top: 40rem;
+  border-radius: 10rem;
+  overflow: hidden;
+
+  @include g.mq() {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    margin-top: 68rem;
+  }
+}
+
+.about-company-table {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.about-company-table-item {
+  padding: 16rem 8rem;
+  border-bottom: 1rem solid var(--color-border);
+  display: grid;
+  gap: 2rem;
+
+  @include g.mq() {
+    grid-template-columns: 70rem auto;
+    padding: 24rem 8rem;
+    gap: 40rem;
+    align-items: center;
+  }
+
+  th {
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.125em;
+    color: var(--color-font-light);
+    text-wrap: nowrap;
+
+    @include g.mq() {
+      font-size: 16rem;
+    }
+  }
+}
