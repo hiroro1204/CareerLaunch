@@ -521,7 +521,7 @@ component > recruit-button
 }
 .c-recruit-button::before {
   content: "";
-  background-image: url("../../img/text_recruit-button.png");
+  background-image: url("../img/text_recruit-button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -685,7 +685,7 @@ component > breadcrumb
   display: inline-block;
   width: 11rem;
   height: 9rem;
-  mask-image: url(../../img/icon_breadcrumb-arrow.svg);
+  mask-image: url(../img/icon_breadcrumb-arrow.svg);
   mask-size: cover;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -1344,7 +1344,7 @@ page > top > top-kv
     display: block;
     width: 46rem;
     height: 46rem;
-    background-image: url("../../img/bg_kv-corner.svg");
+    background-image: url("../img/bg_kv-corner.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -2394,7 +2394,7 @@ page > service > service-card
 }
 .service-card-list-item::before {
   content: "";
-  mask-image: url(../../../img/icon_check.svg);
+  mask-image: url(../img/icon_check.svg);
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -2464,7 +2464,7 @@ page > news > news-pagination
   translate: -50% -50%;
   width: 10rem;
   height: 10rem;
-  mask-image: url(../../../img/icon_pagination-arrow.svg);
+  mask-image: url(../img/icon_pagination-arrow.svg);
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;

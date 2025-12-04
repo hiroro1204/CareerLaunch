@@ -151,7 +151,7 @@ page > service > service-card
 
   &::before {
     content: "";
-    mask-image: url(../../../img/icon_check.svg);
+    mask-image: url(../img/icon_check.svg);
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
