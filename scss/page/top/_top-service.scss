@@ -76,6 +76,10 @@ page > top > top-service
 
   @media (any-hover: hover) {
     &:hover {
+      .top-service-card-image img {
+        transform: scale(1.05);
+      }
+
       .c-button-text {
         color: var(--color-primary02);
       }
@@ -105,6 +109,7 @@ page > top > top-service
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s var(--easing-ease-out-cubic);
   }
 }
 

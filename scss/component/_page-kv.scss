@@ -50,7 +50,6 @@ component > page-kv
   font-weight: 300;
   line-height: 1;
   letter-spacing: 0.05em;
-  text-transform: capitalize;
 
   @include g.mq() {
     font-size: 72rem;

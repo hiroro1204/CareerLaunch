@@ -2,37 +2,27 @@
  * タイプライター風テキストアニメーション機能
  * HTML要素に .js-top-type-text クラスを追加するだけで使用可能
  * SplitTextライブラリを使用してテキストを1文字ずつ分割し、順番に表示
- * ローディングアニメーション完了後に実行される
+ * トップページはローディングアニメーション完了後に実行される
  */
 export function initializeTypeTextAnimation() {
-  // SplitTextが読み込まれているか確認
-  if (typeof SplitText === "undefined") {
-    return;
-  }
-
-  // ScrollTriggerが読み込まれているか確認
-  if (typeof ScrollTrigger === "undefined") {
-    return;
-  }
-
-  // gsapが読み込まれているか確認
-  if (typeof gsap === "undefined") {
+  // 必要なライブラリが読み込まれているか確認
+  if (
+    typeof gsap === "undefined" ||
+    typeof ScrollTrigger === "undefined" ||
+    typeof SplitText === "undefined"
+  ) {
     return;
   }
 
   // ScrollTriggerとSplitTextをGSAPに登録
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  const typeText = document.querySelectorAll(".js-top-type-text");
+  const typeText = document.querySelectorAll(".js-type-text");
 
   if (typeText.length === 0) return;
 
   // 初期状態: ローディング完了まで要素全体を非表示にする
-  typeText.forEach((item) => {
-    gsap.set(item, {
-      opacity: 0,
-    });
-  });
+  gsap.set(typeText, { opacity: 0 });
 
   // アニメーションを設定する関数
   const setupAnimation = () => {
@@ -60,7 +50,7 @@ export function initializeTypeTextAnimation() {
         onEnter: () => {
           gsap.to(chars, {
             opacity: 1,
-            stagger: 0.1, // ここを調整すると「打ってる感」が変わる
+            stagger: 0.06, // ここを調整すると「打ってる感」が変わる
             ease: "none",
           });
         },

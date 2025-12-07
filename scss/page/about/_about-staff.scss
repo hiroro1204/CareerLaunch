@@ -67,9 +67,7 @@ page > about > about-staff
     width: 100%;
     overflow: visible;
   }
-}
 
-.js-about-staff-splide {
   &:focus {
     outline: 2rem solid var(--color-font-base);
     outline-offset: 4rem;

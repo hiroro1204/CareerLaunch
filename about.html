@@ -72,6 +72,7 @@
     <!-- js -->
     <script src="js/vendor/gsap.min.js" defer></script>
     <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="js/vendor/SplitText.min.js" defer></script>
     <script src="js/vendor/splide.min.js" defer></script>
     <script src="js/vendor/splide-extension-auto-scroll.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
@@ -160,7 +161,7 @@
     <div class="c-page-kv">
       <div class="c-page-kv-inner l-container">
         <div class="c-page-kv-title">
-          <span class="c-page-kv-title-en">about</span>
+          <span class="c-page-kv-title-en js-type-text">About</span>
           <h1 class="c-page-kv-title-ja">私たちについて</h1>
         </div>
         <ol class="c-breadcrumb">
@@ -193,41 +194,47 @@
             <li
               class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
             >
-              <p class="about-philosophy-label">mission</p>
-              <p class="about-philosophy-main-text">
-                <span class="u-block">一人ひとりと</span>
-                <span class="u-block">真剣に向き合う</span>
-              </p>
-              <p class="about-philosophy-sub-text">
-                <span class="u-block">学生の可能性を最大限 </span>
-                <span class="u-block">引き出すパートナーとして</span>
-              </p>
+              <section>
+                <h3 class="about-philosophy-title">mission</h3>
+                <p class="about-philosophy-main-text">
+                  <span class="u-block">一人ひとりと</span>
+                  <span class="u-block">真剣に向き合う</span>
+                </p>
+                <p class="about-philosophy-sub-text">
+                  <span class="u-block">学生の可能性を最大限 </span>
+                  <span class="u-block">引き出すパートナーとして</span>
+                </p>
+              </section>
             </li>
             <li
               class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
             >
-              <p class="about-philosophy-label">vision</p>
-              <p class="about-philosophy-main-text">
-                <span class="u-block">自分らしく社会で</span>
-                <span class="u-block">活躍する人材を育成</span>
-              </p>
-              <p class="about-philosophy-sub-text">
-                <span class="u-block">納得のいくキャリア選択が</span>
-                <span class="u-block">できる未来を創る</span>
-              </p>
+              <section>
+                <h3 class="about-philosophy-title">vision</h3>
+                <p class="about-philosophy-main-text">
+                  <span class="u-block">自分らしく社会で</span>
+                  <span class="u-block">活躍する人材を育成</span>
+                </p>
+                <p class="about-philosophy-sub-text">
+                  <span class="u-block">納得のいくキャリア選択が</span>
+                  <span class="u-block">できる未来を創る</span>
+                </p>
+              </section>
             </li>
             <li
               class="about-philosophy-item js-scroll-fade-in u-scroll-fade-in-init"
             >
-              <p class="about-philosophy-label">value</p>
-              <p class="about-philosophy-main-text">
-                <span class="u-block">『らしさ』を大切にした</span>
-                <span class="u-block">キャリア形成</span>
-              </p>
-              <p class="about-philosophy-sub-text">
-                <span class="u-block">型にはめない</span>
-                <span class="u-block">その人だけの強みを見つける</span>
-              </p>
+              <section>
+                <h3 class="about-philosophy-title">value</h3>
+                <p class="about-philosophy-main-text">
+                  <span class="u-block">『らしさ』を大切にした</span>
+                  <span class="u-block">キャリア形成</span>
+                </p>
+                <p class="about-philosophy-sub-text">
+                  <span class="u-block">型にはめない</span>
+                  <span class="u-block">その人だけの強みを見つける</span>
+                </p>
+              </section>
             </li>
           </ul>
         </div>
@@ -247,7 +254,12 @@
         </div>
 
         <div class="about-staff-splide-wrapper">
-          <div class="splide js-about-staff-splide" tabindex="0" role="region" aria-label="スタッフ紹介スライダー">
+          <div
+            class="splide js-about-staff-splide"
+            tabindex="0"
+            role="region"
+            aria-label="スタッフ紹介スライダー"
+          >
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">

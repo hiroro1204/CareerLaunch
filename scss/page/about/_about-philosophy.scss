@@ -53,7 +53,7 @@ page > about > about-philosophy
   }
 }
 
-.about-philosophy-label {
+.about-philosophy-title {
   font-family: var(--font-family-dosis);
   font-size: 23rem;
   font-weight: 500;
@@ -61,6 +61,7 @@ page > about > about-philosophy
   letter-spacing: 0.025em;
   text-transform: capitalize;
   color: var(--color-primary);
+  text-align: center;
 }
 
 .about-philosophy-main-text,

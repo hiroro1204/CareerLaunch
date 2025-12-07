@@ -38,6 +38,26 @@ page > service > service-case
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .service-list-image img {
+        transform: scale(1.05);
+      }
+
+      .c-button-text {
+        color: var(--color-primary02);
+      }
+
+      .c-button-icon {
+        background-color: transparent;
+
+        &::before {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
 }
 
 .service-list-image {
@@ -51,6 +71,7 @@ page > service > service-case
 
   img {
     object-fit: cover;
+    transition: transform 0.3s var(--easing-ease-out-cubic);
   }
 }
 

@@ -19,7 +19,7 @@ export function initializeScrollStaggerAnimation() {
         elements.forEach((element) => {
           gsap.set(element, {
             opacity: 0,
-            y: 30,
+            y: 20,
           });
         });
 
@@ -42,7 +42,7 @@ export function initializeScrollStaggerAnimation() {
         elements.forEach((element) => {
           gsap.set(element, {
             opacity: 0,
-            y: 30,
+            y: 20,
           });
 
           gsap.to(element, {

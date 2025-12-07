@@ -4,7 +4,7 @@ import { initializeRecruitCultureSplide } from "./component/recruit-culture-spli
 import { initializeHeaderAnimation } from "./component/header-animation.js";
 import { initializeScrollAnimation } from "./component/scroll-animation.js";
 import { initializeScrollStaggerAnimation } from "./component/scroll-stagger-animation.js";
-import { initializeTypeTextAnimation } from "./component/top-type-text-animation.js";
+import { initializeTypeTextAnimation } from "./component/type-text-animation.js";
 import { initializeTopLoadingAnimation } from "./component/top-loading-animation.js";
 
 // ScrollTriggerをGSAPに登録
@@ -32,5 +32,5 @@ initializeScrollAnimation();
 initializeScrollStaggerAnimation();
 
 // タイプライター風テキストアニメーションの初期化
-// ローディングアニメーション完了後に実行される（top-type-text-animation.js内で制御）
+// ローディングアニメーションがある場合、完了後に実行される（type-text-animation.js内で制御）
 initializeTypeTextAnimation();

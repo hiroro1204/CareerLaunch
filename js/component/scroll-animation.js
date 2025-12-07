@@ -17,7 +17,7 @@ export function initializeScrollAnimation() {
     // 初期状態: 非表示＋下方向へオフセット
     gsap.set(element, {
       opacity: 0,
-      y: 30,
+      y: 20,
     });
 
     // スクロールでアニメーション実行

@@ -1,27 +1,7 @@
 @use "button";
 @use "title";
-@use "secondary-title";
+@use "small-title";
 @use "recruit-button";
 @use "page-kv";
 @use "breadcrumb";
 @use "news-item";
-
-@use "../global" as g;
-
-.component {
-  background-color: rgb(233, 225, 215);
-  display: grid;
-  place-items: center;
-  gap: 40rem;
-  padding-block: 240rem;
-
-  > * {
-    display: grid;
-    gap: 32rem;
-    place-items: center;
-  }
-}
-
-.recruit-button {
-  margin-block: 240rem;
-}

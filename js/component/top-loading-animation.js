@@ -1,24 +1,50 @@
 /**
  * トップページのローディングアニメーション機能
  * ページ読み込み時にローディング画面を表示し、読み込み完了後にフェードアウト
+ * 一度表示したことがあるかどうかをセッションストレージで判定し、2回目以降はアニメーションをスキップ
  */
+
 export function initializeTopLoadingAnimation() {
   const loadingElement = document.querySelector(".js-top-loading");
-
   if (!loadingElement) return;
 
-  // GSAPが読み込まれているか確認
-  if (typeof gsap === "undefined") {
-    return;
-  }
-
-  const loadingInner = loadingElement.querySelector(".js-top-loading-inner");
   const loadingImageContainer = loadingElement.querySelector(
     ".js-top-loading-image"
   );
   const loadingImages = loadingImageContainer
     ? loadingImageContainer.querySelectorAll("img")
     : [];
+
+  // loadingCompleteイベントを発火する共通関数
+  const dispatchLoadingComplete = () => {
+    window.dispatchEvent(new CustomEvent("loadingComplete"));
+  };
+
+  // 一度表示したことがあるかどうかをセッションストレージで判定
+  const hasShownLoading = sessionStorage.getItem("hasShownLoading");
+
+  if (hasShownLoading) {
+    gsap.set(loadingElement, {
+      display: "none",
+      opacity: 0,
+    });
+    // 2回目以降はアニメーションをスキップ
+    // ただし、type-text-animation.jsが待っているloadingCompleteイベントは発火する必要がある
+    if (document.readyState === "complete") {
+      dispatchLoadingComplete();
+    } else {
+      window.addEventListener("load", dispatchLoadingComplete, { once: true });
+    }
+    return;
+  }
+
+  // 初回表示時はフラグを立てる
+  sessionStorage.setItem("hasShownLoading", "true");
+
+  // GSAPが読み込まれているか確認
+  if (typeof gsap === "undefined") {
+    return;
+  }
 
   // 初期状態: ローディング画面を表示
   gsap.set(loadingElement, {
@@ -27,16 +53,12 @@ export function initializeTopLoadingAnimation() {
   });
 
   // 画像の初期状態: 上に配置（画面外）
-  if (loadingImages.length >= 2) {
-    gsap.set(loadingImages[0], {
+  loadingImages.forEach((img) => {
+    gsap.set(img, {
       y: -150,
       opacity: 0,
     });
-    gsap.set(loadingImages[1], {
-      y: -150,
-      opacity: 0,
-    });
-  }
+  });
 
   // フェードアウト開始のフラグ
   let isPageLoaded = false;
@@ -57,13 +79,13 @@ export function initializeTopLoadingAnimation() {
             display: "none",
           });
           // ローディング完了のカスタムイベントを発火
-          window.dispatchEvent(new CustomEvent("loadingComplete"));
+          dispatchLoadingComplete();
         },
       });
     }
   };
 
-  // 左の画像が上から降りてくるアニメーション
+  // 画像が上から降りてくるアニメーション
   if (loadingImages.length >= 2) {
     // 左の画像（1枚目）を上から降りてくる
     gsap.to(loadingImages[0], {
@@ -79,7 +101,6 @@ export function initializeTopLoadingAnimation() {
           duration: 0.8,
           ease: "power2.out",
           onComplete: () => {
-            // 右の画像のアニメーション完了後、フラグを立てる
             isAnimationComplete = true;
             startFadeOut();
           },
