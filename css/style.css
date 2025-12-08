@@ -926,7 +926,7 @@ layout > header
   line-height: 1.7;
   width: fit-content;
 }
-@media screen and (min-width: 900px) and (any-hover: hover) and (min-width: 900px) {
+@media screen and (min-width: 900px) and (any-hover: hover) {
   .l-header-menu-link:hover .l-header-menu-link-en {
     color: var(--color-primary);
   }
@@ -1018,7 +1018,7 @@ layout > header
     color: var(--color-font-base);
   }
 }
-@media (any-hover: hover) {
+@media screen and (min-width: 900px) and (any-hover: hover) {
   .l-header.l-header--page .l-header-menu-link-en:hover {
     color: var(--color-primary);
   }

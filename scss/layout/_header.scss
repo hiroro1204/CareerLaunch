@@ -149,9 +149,7 @@ layout > header
     @media (any-hover: hover) {
       &:hover {
         .l-header-menu-link-en {
-          @include g.mq() {
-            color: var(--color-primary);
-          }
+          color: var(--color-primary);
         }
       }
     }
@@ -243,11 +241,11 @@ layout > header
   .l-header-menu-link-en {
     @include g.mq() {
       color: var(--color-font-base);
-    }
 
-    @media (any-hover: hover) {
-      &:hover {
-        color: var(--color-primary);
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--color-primary);
+        }
       }
     }
   }
