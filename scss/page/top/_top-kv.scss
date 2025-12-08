@@ -110,6 +110,11 @@ page > top > top-kv
   }
 }
 
+/*
+=================================
+  スクロールダウン (Scroll Down)
+=================================
+*/
 .top-scroll-down-body {
   width: fit-content;
   display: flex;
@@ -127,52 +132,31 @@ page > top > top-kv
   text-orientation: mixed;
 }
 
-.top-scroll-down-arrow {
-  height: 90rem;
-  display: grid;
-  place-items: center;
-}
-
-.top-scroll-down-arrow-line,
-.top-scroll-down-arrow-dot {
-  display: block;
-  background-color: var(--color-primary);
-  border-radius: 4rem;
-
-  /* スクロールダウンアニメーションの継続時間を指定する変数 */
-  --scroll-down-duration: 1.6s;
-}
-
-.top-scroll-down-arrow-line {
+.top-scroll-down-bar {
   width: 2rem;
-  height: 82rem;
-  transform: scaleY(0);
-  transform-origin: top;
-
-  /*! スクロールダウン矢印の線アニメーション */
-  animation: scroll-line-grow var(--scroll-down-duration)
-    var(--easing-ease-in-out-cubic) infinite;
-
-  @keyframes scroll-line-grow {
-    to {
-      transform: scaleY(1);
-    }
-  }
+  height: 90rem;
+  background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 
-.top-scroll-down-arrow-dot {
-  margin-top: 4rem;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(calc(-82rem * 1));
+.top-scroll-down-bar-active {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 2rem;
+  height: 50rem;
+  background: var(--color-primary);
+  animation: scrollDown 1.5s var(--easing-ease-out-cubic) infinite normal;
+}
 
-  /* スクロールダウン矢印のドットアニメーション */
-  animation: scroll-arrow-move var(--scroll-down-duration)
-    var(--easing-ease-in-out-cubic) infinite;
-
-  @keyframes scroll-arrow-move {
-    to {
-      transform: translateY(0);
-    }
+/* スクロールダウンアニメーション */
+@keyframes scrollDown {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -50rem;
   }
 }
