@@ -15,7 +15,7 @@ export function initializeTopLoadingAnimation() {
     ? loadingImageContainer.querySelectorAll("img")
     : [];
 
-  // loadingCompleteイベントを発火する共通関数
+  // カスタムイベント「loadingComplete」を発火する共通関数
   const dispatchLoadingComplete = () => {
     window.dispatchEvent(new CustomEvent("loadingComplete"));
   };
