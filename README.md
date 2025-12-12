@@ -36,3 +36,4 @@ HTML / SCSS / JavaScript
 
 - **Live Sass Compiler**：SCSS のリアルタイムコンパイル
 - **Prettier**：HTML / SCSS / JS / JSON 等のコード整形
+- **Live Server**：ローカル開発サーバーでのリアルタイムプレビュー・実機確認
